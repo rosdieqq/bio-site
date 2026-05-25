@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="rosdieqq - cinematic liquid glass personal bio page"
+    />
+    <title>rosdieqq</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="loader" data-loader>
+      <div class="loader__ring"></div>
+      <p data-i18n="loading">Loading silence...</p>
+    </div>
+
+    <div class="cursor-glow" data-cursor-glow></div>
+
+    <div class="scene" data-scene>
+      <div class="background-layer" data-background-layer></div>
+      <video
+        class="background-video"
+        data-background-video
+        src="assets/bg.mp4"
+        muted
+        loop
+        playsinline
+      ></video>
+      <div class="background-overlay"></div>
+      <div class="ambient-gradient"></div>
+      <div class="grain"></div>
+    </div>
+
+    <main class="page-shell">
+      <section class="top-bar glass-panel" aria-label="Page controls">
+        <div class="language-switcher" aria-label="Language">
+          <button class="lang-btn is-active" data-lang="en" type="button">EN</button>
+          <button class="lang-btn" data-lang="ru" type="button">RU</button>
+          <button class="lang-btn" data-lang="ua" type="button">UA</button>
+        </div>
+
+        <label class="upload-control" for="backgroundUpload">
+          <span data-i18n="uploadBackground">Background</span>
+          <input
+            id="backgroundUpload"
+            type="file"
+            accept="image/gif,image/*,video/mp4,video/webm"
+            data-background-upload
+          />
+        </label>
+      </section>
+
+      <section class="profile-card glass-panel" data-profile-card>
+        <div class="liquid-shine"></div>
+
+        <div class="mood-row">
+          <span class="mood-dot" aria-hidden="true"></span>
+          <span data-i18n="mood">offline mood / listening to rain</span>
+        </div>
+
+        <div class="avatar-frame">
+          <img
+            class="avatar"
+            src="assets/avatar.svg"
+            alt="rosdieqq avatar"
+            data-avatar
+          />
+        </div>
+
+        <p class="eyebrow" data-i18n="identity">personal identity</p>
+        <h1>rosdieqq</h1>
+        <p class="subtitle" data-typing data-i18n="subtitle">
+          lonely signal in the dark
+        </p>
+        <p class="status" data-i18n="status">
+          soft noise, cold glass, and a quiet night that does not end.
+        </p>
+
+        <nav class="socials" aria-label="Social links">
+          <a class="glass-button" href="https://discord.com/users/rosdieqq" target="_blank" rel="noreferrer">
+            <span class="button-icon" aria-hidden="true">D</span>
+            <span>Discord</span>
+          </a>
+          <a class="glass-button" href="https://steamcommunity.com/id/rosdieqq" target="_blank" rel="noreferrer">
+            <span class="button-icon" aria-hidden="true">S</span>
+            <span>Steam</span>
+          </a>
+        </nav>
+
+        <section class="music-player" aria-label="Music player">
+          <div class="player-head">
+            <button
+              class="play-button"
+              data-play-toggle
+              type="button"
+              aria-label="Play music"
+            >
+              <span data-play-icon>▶</span>
+            </button>
+            <div>
+              <p class="track-label" data-i18n="trackLabel">ambient track</p>
+              <p class="track-title" data-i18n="trackTitle">replace assets/music.mp3</p>
+            </div>
+            <button class="loop-button is-active" data-loop-toggle type="button">
+              <span data-i18n="loop">loop</span>
+            </button>
+          </div>
+
+          <input
+            class="progress"
+            data-progress
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            aria-label="Music progress"
+          />
+
+          <div class="player-foot">
+            <span data-current-time>0:00</span>
+            <label class="volume">
+              <span data-i18n="volume">volume</span>
+              <input
+                data-volume
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.55"
+                aria-label="Volume"
+              />
+            </label>
+            <span data-duration>0:00</span>
+          </div>
+
+          <button class="ambient-toggle" data-ambient-toggle type="button">
+            <span class="ambient-pulse" aria-hidden="true"></span>
+            <span data-i18n="ambientOff">ambient sound off</span>
+          </button>
+        </section>
+      </section>
+    </main>
+
+    <audio data-audio src="assets/music.mp3" preload="metadata" loop muted></audio>
+    <script src="script.js"></script>
+  </body>
+</html>

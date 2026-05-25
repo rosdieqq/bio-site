@@ -1,8 +1,8 @@
 const SETTINGS = {
-  avatar: "assets/dddc91df02ac31f80240bdf528c72d5f.jpg",
-  background: "assets/143257.gif",
-  videoBackground: "assets/143257.gif",
-  music: "assets/alex_g-not_anywhere.mp3",
+  avatar: "dddc91df02ac31f80240bdf528c72d5f.jpg",
+  background: "143257.gif",
+  videoBackground: "143257.gif",
+  music: "alex_g-not_anywhere.mp3",
   discordUrl: "https://discord.com/users/rosdieqq",
   steamUrl: "https://steamcommunity.com/profiles/76561199219820519/",
 };
